@@ -1,0 +1,14 @@
+# Ignore dataset images
+data/cats/*
+data/dogs/*
+
+# But keep folder structure using .gitkeep
+!data/cats/.gitkeep
+!data/dogs/.gitkeep
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+
