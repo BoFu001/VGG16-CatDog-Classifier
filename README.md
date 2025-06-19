@@ -1,3 +1,5 @@
+<img src="img/cover.jpg" width="100%" />
+
 # Cat vs Dog Classification Using Transfer Learning (VGG16)
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-Project-blue?logo=github)](https://github.com/BoFu001/vgg16-catdog-classifier)
