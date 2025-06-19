@@ -10,16 +10,16 @@
 
 ## Table of Contents
 
-- [Project Objective](#-project-objective)
-- [Dataset Overview](#-dataset-overview)
-- [Dataset Splitting](#-dataset-splitting)
-- [Project Structure](#-project-structure)
-- [Modular Design](#-modular-design)
-- [Trained Models & Features](#-download-trained-models--features)
-- [Why Transfer Learning?](#-why-transfer-learning)
-- [Comparative Perspective](#-comparative-perspective)
-- [Summary](#-summary)
-- [License](#-license)
+- [Project Objective](#project-objective)
+- [Dataset Overview](#dataset-overview)
+- [Dataset Splitting](#dataset-splitting)
+- [Project Structure](#project-structure)
+- [Modular Design](#modular-design)
+- [Download Trained Models & Features](#download-trained-models--features)
+- [Why Transfer Learning](#why-transfer-learning)
+- [Comparative Perspective](#comparative-perspective)
+- [Summary](#summary)
+- [License](#license)
 
 ---
 
@@ -58,10 +58,10 @@ After feature extraction with VGG16, the dataset was randomly partitioned into t
 
 ```bash
 VGG16-CatDog-Classifier/
-├── data/                         # Raw image dataset
+├── data/                                 # Raw image dataset
 │   ├── cats/
 │   ├── dogs/
-├── models/                       # Trained model files and features
+├── models/                               # Trained model files and features
 │   ├── complex_model.keras
 │   ├── complex_model_history.pkl
 │   ├── features.npy
@@ -69,7 +69,7 @@ VGG16-CatDog-Classifier/
 │   ├── labels.npy
 │   ├── simple_model.keras
 │   └── simple_model_history.pkl
-├── modules/                      # Python modules
+├── modules/                              # Python modules
 │   ├── feature_extraction.py
 │   ├── build_model.py
 │   ├── callbacks.py
@@ -77,7 +77,7 @@ VGG16-CatDog-Classifier/
 │   ├── evaluate_model.py
 │   ├── history_plot.py
 │   └── visualize_errors.py
-├── VGG16-CatDog-Classifier.ipynb # Main notebook
+├── VGG16-CatDog-Classifier.ipynb         # Main notebook
 └── README.md
 ```
 
