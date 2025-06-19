@@ -12,3 +12,11 @@ data/dogs/*
 # macOS system files
 .DS_Store
 
+# Ignore model files and large arrays
+models/*.keras
+models/*.pkl
+models/*.npy
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
