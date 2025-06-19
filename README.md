@@ -78,7 +78,8 @@ VGG16-CatDog-Classifier/
 │   ├── history_plot.py
 │   └── visualize_errors.py
 ├── VGG16-CatDog-Classifier.ipynb         # Main notebook
-└── README.md
+├── README.md
+└── LICENSE                               # Project license (MIT)
 ```
 
 ---
