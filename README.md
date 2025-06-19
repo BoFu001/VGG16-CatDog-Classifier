@@ -13,7 +13,9 @@
 - [Project Objective](#-project-objective)
 - [Dataset Overview](#-dataset-overview)
 - [Dataset Splitting](#-dataset-splitting)
-- [Modular Architecture](#-project-structure-modular-design)
+- [Project Structure](#-project-structure)
+- [Modular Design](#-modular-design)
+- [Trained Models & Features](#-download-trained-models--features)
 - [Why Transfer Learning?](#-why-transfer-learning)
 - [Comparative Perspective](#-comparative-perspective)
 - [Summary](#-summary)
@@ -52,7 +54,36 @@ After feature extraction with VGG16, the dataset was randomly partitioned into t
 
 ---
 
-### Project Structure: Modular Design
+### Project Structure
+
+```bash
+VGG16-CatDog-Classifier/
+├── data/                         # Raw image dataset
+│   ├── cats/
+│   ├── dogs/
+├── models/                       # Trained model files and features
+│   ├── complex_model.keras
+│   ├── complex_model_history.pkl
+│   ├── features.npy
+│   ├── image_paths.npy
+│   ├── labels.npy
+│   ├── simple_model.keras
+│   └── simple_model_history.pkl
+├── modules/                      # Python modules
+│   ├── feature_extraction.py
+│   ├── build_model.py
+│   ├── callbacks.py
+│   ├── train_utils.py
+│   ├── evaluate_model.py
+│   ├── history_plot.py
+│   └── visualize_errors.py
+├── VGG16-CatDog-Classifier.ipynb # Main notebook
+└── README.md
+```
+
+---
+
+### Modular Design
 
 This project adopts a modular architecture for clarity, scalability, and ease of reuse. All key functionalities are encapsulated within independent Python modules located in `./modules/`:
 
@@ -68,6 +99,26 @@ This project adopts a modular architecture for clarity, scalability, and ease of
 
 ---
 
+### Download Trained Models & Features
+
+The trained models and extracted VGG16 features are **not stored in the repo** (due to size limits).  
+Instead, download them from the [GitHub Release v1.0](https://github.com/BoFu001/VGG16-CatDog-Classifier/releases/tag/v1.0):
+
+```bash
+wget https://github.com/BoFu001/VGG16-CatDog-Classifier/releases/download/v1.0/vgg16_catdog_models_v1.0.zip
+unzip vgg16_catdog_models_v1.0.zip -d models/
+```
+
+**Included Files:**
+
+- `features.npy` – Flattened VGG16 features ([20000, 25088])
+- `labels.npy` – Binary labels: 0 = cat, 1 = dog
+- `image_paths.npy` – File paths used for traceability
+- `simple_model.keras` – Lightweight fully-connected classifier
+- `complex_model.keras` – Larger classifier with dropout
+- `*_history.pkl` – Training history logs
+
+---
 
 ### Why Transfer Learning?
 
